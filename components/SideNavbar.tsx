@@ -13,10 +13,14 @@ const SideNavbar = () => {
   return (
     <div className="relative">
       <button
-        className="fixed top-2 left-1 z-50 bg-slate-400 text-white p-2 rounded-full md:hidden"
+        className="fixed top-3 left-1 z-50 bg-slate-400 text-white p-2 rounded-full md:hidden"
         onClick={toggleSidebar}
       >
-        {isOpen ? <SidebarCloseIcon /> : <MenuIcon />}
+        {isOpen ? (
+          <SidebarCloseIcon className="size-4" />
+        ) : (
+          <MenuIcon className="size-4" />
+        )}
       </button>
       <div
         className={`flex flex-col justify-between fixed top-0 left-0 w-[246px] bg-white h-screen text-black shadow-md rounded-2xl transform ${

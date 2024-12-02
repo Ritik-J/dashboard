@@ -1,4 +1,9 @@
 import { DownloadIcon } from "lucide-react";
+import TimeFilter from "./TimeFilter";
+import GroupFilter from "./GroupFilter";
+import TopicFilter from "./TopicFilter";
+import UserStats from "./UserStats";
+import { UserActivity } from "./UserActivity";
 
 const Dashboard = () => {
   return (
@@ -12,7 +17,15 @@ const Dashboard = () => {
         </button>
       </header>
       <hr className="mt-8" />
-      <div></div>
+      <div className="mt-4 flex justify-between">
+        <TimeFilter />
+        <GroupFilter />
+        <TopicFilter />
+      </div>
+      <div className="w-full flex items-center h-80 p-2">
+        <UserStats />
+        <UserActivity />
+      </div>
     </div>
   );
 };
