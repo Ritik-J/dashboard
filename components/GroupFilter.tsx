@@ -60,7 +60,7 @@ const GroupFilter = () => {
   };
 
   return (
-    <div className="w-[300px] font-inter">
+    <div className="w-fit lg:w-[300px] font-inter">
       <DropdownMenu open={open} onOpenChange={setOpen}>
         <DropdownMenuTrigger asChild>
           <Button

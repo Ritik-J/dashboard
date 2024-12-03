@@ -65,16 +65,19 @@ export const dashboardData = {
   topics: {
     weakest: [
       {
+        id: 1,
         name: "Food Safety",
         image: "https://placehold.co/49x32",
         correct_percentage: 74,
       },
       {
+        id: 2,
         name: "Compliance Basics Procedures",
         image: "https://placehold.co/49x32",
         correct_percentage: 52,
       },
       {
+        id: 3,
         name: "Company Networking",
         image: "https://placehold.co/49x32",
         correct_percentage: 36,

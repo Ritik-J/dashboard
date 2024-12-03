@@ -55,7 +55,7 @@ const UserStats = () => {
   ];
 
   return (
-    <div className="w-[50%] flex flex-wrap items-center justify-start gap-2 font-inter text-xs text-[#000000b3]">
+    <div className="w-full lg:w-[50%] flex flex-wrap items-center justify-center gap-2 font-inter text-xs text-[#000000b3]">
       {stats.map((stat) => (
         <div
           key={stat.id}

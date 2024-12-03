@@ -16,7 +16,7 @@ const TopicFilter = () => {
   return (
     <>
       <Select onValueChange={(value: string) => setSelectedValue(value)}>
-        <SelectTrigger className="w-[280px] font-inter">
+        <SelectTrigger className="w-fit lg:w-[280px] font-inter">
           <SelectValue placeholder={filterValue}>
             <span className={selectedValue ? "font-semibold" : ""}>
               {selectedValue ? `Timeframe: ${selectedValue}` : "Timeframe"}
