@@ -29,7 +29,7 @@ const items: Item[] = [
   { id: "evelyn", name: "Evelyn Hamilton", type: "user" },
 ];
 
-const GroupFilter = () => {
+const GroupFilter: React.FC = () => {
   const [open, setOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedItems, setSelectedItems] = useState<Item[]>([
@@ -60,7 +60,7 @@ const GroupFilter = () => {
   };
 
   return (
-    <div className="w-fit lg:w-[300px] font-inter">
+    <div className="w-full lg:w-[300px] font-inter">
       <DropdownMenu open={open} onOpenChange={setOpen}>
         <DropdownMenuTrigger asChild>
           <Button
@@ -75,7 +75,10 @@ const GroupFilter = () => {
             <ChevronDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="w-[300px] p-0" align="start">
+        <DropdownMenuContent
+          className="w-[300px] p-0 bg-[#F9F9F9]"
+          align="start"
+        >
           <div className="flex flex-col gap-2 p-2">
             {selectedItems.length > 0 && (
               <div className="flex items-center justify-between">

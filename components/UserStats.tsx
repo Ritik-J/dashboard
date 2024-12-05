@@ -1,7 +1,7 @@
 import { dashboardData } from "@/data";
 import Image from "next/image";
 
-const UserStats = () => {
+const UserStats: React.FC = () => {
   const { metrics } = dashboardData;
   const {
     active_users,

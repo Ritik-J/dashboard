@@ -9,15 +9,15 @@ interface Topic {
   correct_percentage: number;
 }
 
-const StrongestTopics: React.FC = () => {
+const WeakestTopic: React.FC = () => {
   const { topics } = dashboardData;
-  const { strongest } = topics;
+  const { weakest } = topics;
 
   return (
     <div className="w-full lg:w-[50%] h-full rounded-2xl shadow-xl shadow-[#EFF0F6] bg-white">
       <div className="flex flex-col p-6 gap-7 w-full font-inter justify-center">
-        <p className="text-gray-500 font-semibold">Strongest Topic</p>
-        {strongest.map((topic: Topic) => (
+        <p className="text-gray-500 font-semibold">Weakest Topic</p>
+        {weakest.map((topic: Topic) => (
           <div key={topic.id} className="flex justify-between items-center">
             <img src={topic.image} alt={`${topic.name} image`} />
             <div className="flex flex-col gap-1 w-[70%]">
@@ -26,7 +26,7 @@ const StrongestTopics: React.FC = () => {
                 value={topic.correct_percentage}
                 className={
                   topic.correct_percentage
-                    ? "bg-green-200 [&>div]:bg-gradient-to-r from-[#2FEA9B] to-[#7FDD53] h-3"
+                    ? "bg-rose-200 [&>div]:bg-gradient-to-r from-amber-500 to-rose-500 h-3"
                     : ""
                 }
               />
@@ -42,4 +42,4 @@ const StrongestTopics: React.FC = () => {
   );
 };
 
-export default StrongestTopics;
+export default WeakestTopic;

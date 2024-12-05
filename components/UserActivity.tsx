@@ -10,7 +10,7 @@ import {
 import { ChevronDown } from "lucide-react";
 import { dashboardData } from "@/data";
 
-export default function UserActivity() {
+const UserActivity: React.FC = () => {
   const { activity } = dashboardData;
   return (
     <div className="lg:w-[50%] h-full bg-white shadow-xl shadow-[#EFF0F6] rounded-2xl text-[#4D4D4D]">
@@ -72,4 +72,6 @@ export default function UserActivity() {
       </Card>
     </div>
   );
-}
+};
+
+export default UserActivity;
